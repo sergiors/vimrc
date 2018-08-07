@@ -12,6 +12,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'sickill/vim-monokai'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -55,6 +56,12 @@ set linebreak                   " break long lines at words, when wrap is on
 set whichwrap=b,s,h,l,<,>,[,]   " allow <BS> & cursor keys to move to prev/next line
 set showbreak=↪                 " string to put at the starting of wrapped lines
 set textwidth=80                " wrap after this many characters in a line
+
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 if has('mouse')
   set mouse=a
